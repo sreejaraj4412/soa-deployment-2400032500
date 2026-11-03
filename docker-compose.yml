@@ -43,7 +43,7 @@ services:
     ports:
       - "9000:8000"
     environment:
-      EUREKA_INSTANCE_STATUSPAGEURL: http://localhost:9000/actuator/info
+      EUREKA_INSTANCE_STATUSPAGEURL: http://ec2-18-118-136-115.us-east-2.compute.amazonaws.com:9000/actuator/info
     depends_on:
       - eureka-server
       - user-service
@@ -62,7 +62,7 @@ services:
     ports:
       - "9001:8001"
     environment:
-      EUREKA_INSTANCE_STATUSPAGEURL: http://localhost:9001/actuator/info
+      EUREKA_INSTANCE_STATUSPAGEURL: http://ec2-18-118-136-115.us-east-2.compute.amazonaws.com:9001/actuator/info
     depends_on:
       eureka-server:
         condition: service_started
@@ -81,7 +81,7 @@ services:
     ports:
       - "9002:8002"
     environment:
-      EUREKA_INSTANCE_STATUSPAGEURL: http://localhost:9002/actuator/info
+      EUREKA_INSTANCE_STATUSPAGEURL: http://ec2-18-118-136-115.us-east-2.compute.amazonaws.com:9002/actuator/info
     depends_on:
       eureka-server:
         condition: service_started
@@ -100,7 +100,7 @@ services:
     ports:
       - "9003:8003"
     environment:
-      EUREKA_INSTANCE_STATUSPAGEURL: http://localhost:9003/actuator/info
+      EUREKA_INSTANCE_STATUSPAGEURL: http://ec2-18-118-136-115.us-east-2.compute.amazonaws.com:9003/actuator/info
     depends_on:
       eureka-server:
         condition: service_started
